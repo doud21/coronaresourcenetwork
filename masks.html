@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>Get A Mask</title>
+  	<link rel="stylesheet" type="text/css" href="css/masks.css"/>
+  	<link rel="stylesheet" href="https://use.typekit.net/gfs2opu.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="libraries/stupidtable.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="home">
+        <a href="https://emergencydesigncollective.com/">
+          <img src="images/logo.png" alt ="Emergency Design Collective" class="logo">
+        </a>
+      </div>
+      <div class="buttons">
+        <nav>
+          <ul>
+            <li>
+              <button onclick="window.location.href='index.html';" class="svg" id="home">Home</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='masks.html';" class="svg" id="mask">Get a Mask</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='testing.html';"  class="svg" id="testing">Get Tested</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='volunteer.html';"  class="svg" id="volunteer">Get Involved</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="navbar2">
+      <div class="menu">
+        <div class="home">
+          <a href="https://emergencydesigncollective.com/">
+            <img src="images/logo.png" alt ="Emergency Design Collective" class="logo">
+          </a>
+        </div>
+        <a href="javascript:void(0);" class="hamburger" onclick="openBurger()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="buttons2">
+        <nav>
+          <ul>
+            <li>
+              <button onclick="window.location.href='index.html';" class="svg" id="home">Home</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='masks.html';" class="svg" id="mask">Get a Mask</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='testing.html';"  class="svg" id="testing">Get Tested</a>
+            </li>
+            <li>
+              <button onclick="window.location.href='volunteer.html';"  class="svg" id="volunteer">Get Involved</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="resources">
+      <h1>Get a Mask</h1>
+      <div class="header">
+        <img src="images/mask2.png"/ class="mask">
+        <div class="left">
+          <h2 class="firstHeader">Find mask providers in your area</h2>
+          <p>Enter your zip code:</p>
+          <div class="form">
+            <div class="field">
+              <label for="zip">
+                <div class="enter">
+                  <input type="text" pattern="[0-9]*" maxlength="5" id="zip" name="zip" placeholder="Zip Code" required>
+                  <span class="error" aria-live="polite"></span>
+                </div>
+              </label>
+              <input type="button" value="Find" id="submit" onclick="submitForm()"><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display">
+        <div id="instructions">
+
+        </div>
+
+        <table class="table" id="table">
+          <thead id="tHead" title="Click to Sort">
+
+          </thead>
+          <tbody id="tBody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div class="line">
+        <a href="contact" class="edc">Contact</a>
+      </div>
+      <div class="line">
+        <a href="https://emergencydesigncollective.com/" class="edc">Emergency Design Collective</a>
+      </div>
+      <div class="line">
+        (c) EDC 2020
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://spreadsheets.google.com/feeds/cells/1pIoT11igVnkenL8MrC7GIEsLLAp_V1EU3iwFUFQmlmw/od6/public/values?alt=json-in-script&callback=myCallback"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script src="js/masks.js"></script>
+</html>
