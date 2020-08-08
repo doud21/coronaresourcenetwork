@@ -377,7 +377,11 @@ footer {
     margin: 0;
     padding: 0;
     border: 0;
-    color: #560e12;
+    color: #fff;
+    background: #AC1C24;
+    -webkit-background-clip: #AC1C24;
+    -webkit-text-fill-color: #fff;
+    border-top: solid 1px #fff;
   }
 
   ul {
