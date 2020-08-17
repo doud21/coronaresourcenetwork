@@ -10,22 +10,37 @@ function openBurger() {
 }
 
 // Display Lightbox
-function unhideLightbox() {
+//1
+function unhideLightboxOne() {
 
   document.getElementById('lightboxOverlay').classList.remove('hidden');
-  document.getElementById('covered').classList.remove('hidden');
+  document.getElementById('covered1').classList.remove('hidden');
   document.body.style.overflow = "hidden";
 
 }
 
-document.getElementById('img1').onclick = unhideLightbox;
-document.getElementById('img2').onclick = unhideLightbox;
+document.getElementById('img1').onclick = unhideLightboxOne;
+
+document.getElementById('lightboxOverlay').onclick = closeLightbox;
 
 
-function closeLightbox(lightboxID) {
+//2
+function unhideLightboxTwo() {
+
+  document.getElementById('lightboxOverlay').classList.remove('hidden');
+  document.getElementById('covered2').classList.remove('hidden');
+  document.body.style.overflow = "hidden";
+
+}
+
+document.getElementById('img2').onclick = unhideLightboxTwo;
+
+
+function closeLightbox() {
 
 	document.getElementById('lightboxOverlay').classList.add('hidden');
-	document.getElementById('covered').classList.add('hidden');
+  document.getElementById('covered1').classList.add('hidden');
+	document.getElementById('covered2').classList.add('hidden');
   document.body.style.overflow = "scroll";
 }
 

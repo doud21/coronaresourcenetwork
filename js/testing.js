@@ -60,7 +60,6 @@ function submitForm() {
   document.getElementById('tHead').innerHTML = '';
   document.getElementById('tBody').innerHTML = '';
 
-  document.getElementById('instructions').innerHTML = ('Results displayed within a 10 mile radius. Click on column titles to sort.');
   document.getElementById('tHead').innerHTML = ('<tr><th data-sort="string">City</th><th data-sort="string">Site</th></tr>');
 
   //Conduct Zip Code Radius Search
@@ -84,6 +83,7 @@ function submitForm() {
       var sheetData = data.feed.entry;
 
       var i;
+      var count = 0;
 
       for (i = 0; i < sheetData.length; i++) {
 
@@ -93,12 +93,19 @@ function submitForm() {
         var url = sheetData[i]['gsx$url']['$t'];
         const common = filteredZip.some(code=> zip.includes(code));
 
-        if (common || zip == 0) {
-          document.getElementById('tBody').innerHTML += ('<tr>'+'<td>'+city+'</td>'+'<td>'+'<a href="'+url+'">'+org+'</a>'+'</td>'+'</tr>');
+        if (common) {
+          document.getElementById('tBody').innerHTML += ('<tr>'+'<td>'+city+'</td>'+'<td>'+'<a target="_blank" href="'+url+'">'+org+'</a>'+'</td>'+'</tr>');
+          document.getElementById('instructions').innerHTML = ('Results displayed within a 10 mile radius and may not include all testing centers in your area. Click on column titles to sort.');
         }else {
-          sheetData[i].hidden = true;
-        };
+          count += 1
+        }
+        if (zip==0) {
+          document.getElementById('tBody').innerHTML += ('<tr>'+'<td>'+city+'</td>'+'<td>'+'<a target="_blank" href="'+url+'">'+org+'</a>'+'</td>'+'</tr>');
+        }
       };
+      if (count == sheetData.length) {
+        document.getElementById('instructions').innerHTML = ('We have not yet identified testing centers in your area. These national resources may be helpful.');
+      }
 
     });
 

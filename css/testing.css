@@ -151,7 +151,7 @@ h1 {
 
  .header {
    position: relative;
-   top: 20vh;
+   top: 10vh;
    display: flex;
    flex-direction: row-reverse;
    justify-content: space-between;
@@ -267,14 +267,17 @@ input:focus:invalid {
 /* Display Results */
 .display {
   position: relative;
-  top: 15vh;
+  top: 5vh;
   margin-left: 15vw;
   margin-right: 15vw;
   margin-bottom: 15vh;
 }
 
+.table {
+  margin-top: 15px;
+}
+
 th {
-  margin-top: 10px;
   text-align: left;
   font-weight: normal;
   font-size: 28px;
