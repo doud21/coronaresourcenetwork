@@ -381,8 +381,8 @@ footer {
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
   }
 
   .navbar2 .buttons2 {
@@ -465,9 +465,6 @@ footer {
 
   /* Sections */
   section {
-    /* display: inline-block;
-    width: 100vw;
-    height: 100vh; */
     display: block;
     justify-content: space-between;
     animation: fadeIn 1s ease 1 forwards;
@@ -496,16 +493,17 @@ footer {
     padding: 5px;
   }
 
-  h2 {
-    display: none;
+  .guidelines {
+    position: relative;
+    margin-top: 30vh;
   }
 
   .masks {
-    width: 60vw;
+    width: 20vw;
   }
 
-  .list {
-    font-size: 16px;
+  .list, .tips {
+    font-size: 12px;
   }
 
   /* Footer */
@@ -514,7 +512,7 @@ footer {
   }
 }
 
-@media only screen and (max-height: 689px) {
+@media only screen and (max-height: 642px) {
 
   .scrollDown {
     display: none;
@@ -522,11 +520,9 @@ footer {
 
   /* Sections */
   section {
-    /* display: inline-block;
-    width: 100vw;
-    height: 100vh; */
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     animation: fadeIn 1s ease 1 forwards;
   }
@@ -536,37 +532,69 @@ footer {
     z-index: 1;
     margin: 0;
     padding: 0;
-    min-height: 150vh;
+    min-height: 125vh;
+
   }
 
   #bottom {
+    top: 0;
     position: relative;
     text-align: center;
     margin: 0;
-    top: 50vh;
+    padding: 0;
     margin-bottom: 25vh;
-    min-height: 654px;
+    min-height: 100vh;
   }
 
   h1 {
-    top: 25px;
     font-size: 40px;
     padding: 5px;
   }
 
   h2 {
-    display: none;
+    top: 10px;
   }
 
-  .masks {
-    width: 60vw;
+  h3 {
+    top: 10px;
+  }
+
+  .shortcuts {
+    top: 10px;
   }
 
   .list {
     font-size: 16px;
   }
 
+  .text {
+    position: relative;
+    top: 5px;
+    margin: 0;
+    padding: 0;
+  }
+
   footer {
+    position: fixed;
+    z-index: 50;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  #top {
+    max-height: 50vh;
+
+  }
+
+  #bottom {
+    max-height: 200vh;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .shortcuts {
     display: none;
   }
 }

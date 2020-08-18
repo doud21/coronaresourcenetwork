@@ -270,11 +270,12 @@ input:focus:invalid {
   top: 5vh;
   margin-left: 15vw;
   margin-right: 15vw;
-  margin-bottom: 15vh;
+  margin-bottom: 25vh;
 }
 
 .table {
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 th {
@@ -311,27 +312,42 @@ td a:hover {
 
 footer {
   position: fixed;
-  left: 0;
-  right: 0;
   bottom: 0;
-  margin: 0;
+  margin:0;
+  padding: 0;
   max-width: 100vw;
   background-color: #AC1C24;
   color: white;
   padding: 2vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   animation: fadeIn 1.5s ease 1 forwards;
+  font-size: 14px;
 }
 
-.edc {
+.lines {
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.about-us a {
   text-decoration: underline;
   color: #fff;
   transition: all .250s ease-out;
 }
 
-.edc:hover {
+.about-us a:hover {
   opacity: 0.5;
 }
 

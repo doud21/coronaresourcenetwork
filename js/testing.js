@@ -103,66 +103,11 @@ function submitForm() {
           document.getElementById('tBody').innerHTML += ('<tr>'+'<td>'+city+'</td>'+'<td>'+'<a target="_blank" href="'+url+'">'+org+'</a>'+'</td>'+'</tr>');
         }
       };
+
       if (count == sheetData.length) {
         document.getElementById('instructions').innerHTML = ('We have not yet identified testing centers in your area. These national resources may be helpful.');
       }
-
     });
-
-    // if (!document.getElementById('zip').value) {
-    //
-    // };
   };
-  request.send()
+  request.send();
 }
-
-// // Sorting the Table
-// const columnTitle = document.querySelector('#table th');
-//
-// columnTitle.forEach((title, i)=> {
-//   title.addEventListener('click', event=> {
-//     sortTable(columnTitle, i);
-//   })
-// })
-//
-// function sortTable(columnTitle, column) {
-//
-// }
-
-// // Use Tabletop API Retrieve Google Sheets Table Data
-// var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1pIoT11igVnkenL8MrC7GIEsLLAp_V1EU3iwFUFQmlmw/edit?usp=sharing';
-//
-// function init() {
-//   Tabletop.init( { key: publicSpreadsheetUrl,
-//                    callback: showInfo,
-//                    simpleSheet: false } )
-// };
-//
-//
-// function showInfo(data, tabletop) {
-//   tabletop.sheets("mask")
-//   // alert('Successfully processed!')
-//   console.log(data);
-// }
-//
-// window.addEventListener('DOMContentLoaded', init);
-
-
-// // import GSheetReader from "g-sheets-api";
-// const GSheetReader = require(['g-sheets-api'], function (g-sheets-api) {
-//
-// });
-//
-// const options = {
-//   sheetId: "1pIoT11igVnkenL8MrC7GIEsLLAp_V1EU3iwFUFQmlmw",
-//   sheetNumber: 1,
-//   returnAllResults: false,
-//   // filter: {
-//   //   "key to filter on": "value to match",
-//   // },
-//
-// };
-//
-// GSheetReader(options, results => {
-//   // do something with the results here
-// });
